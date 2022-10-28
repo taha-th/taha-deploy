@@ -21,9 +21,9 @@ jobs:
            name: |
            command: npm rebuild node-sass
       - run:
-          name: install
-          command: |
-           npm install && git checkout `echo $CIRCLE_BRANCH | sed -e 's/ostap\|chagin/alpha/g'` && git pull && cd .. && ls -la
+           name: install
+           command: |
+            npm install && git checkout `echo $CIRCLE_BRANCH | sed -e 's/ostap\|chagin/alpha/g'` && git pull && cd .. && ls -la
        
       - run:
           name: deploy
